@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 export default function GruntDataSlate() {
   const [gruntDataState, setGruntDataState] = useState({
+    name: "Steve",
     movement: 5,
     hitpoints: 1,
   });
@@ -16,8 +17,14 @@ export default function GruntDataSlate() {
   return (
     <div>
       <form>
-        <th>{gruntDataState.movement}</th>
-        <th>{gruntDataState.hitpoints}</th>
+        <h3>{gruntDataState.name}</h3>
+        <th>
+          "Movement"
+          <td>{gruntDataState.movement}</td>
+        </th>
+        <th>
+          Hitpoints <td>{gruntDataState.hitpoints}</td>
+        </th>
       </form>
       <span>
         <button onClick={handleClick}>Add Hitpoint!</button>
